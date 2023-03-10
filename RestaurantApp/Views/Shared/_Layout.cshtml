@@ -1,50 +1,124 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" class="no-js">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RestaurantApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/RestaurantApp.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RestaurantApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>@ViewData["Title"] - Proje Örneği DMP</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Bu Proje Hatice Solakoğlu Tarafından SmartPro Adına verilen Etüt Derslerinde yapılmıştır. Hatice Hoca'ya bütün bunlar için binlerce kez teşekkür ederiz. İşini Seven Bilgili böyle Donanımlı Hocamız Olduğu İçin Çok Şanslıyız Teşekkürler Hocam">
+    <meta name="keywords" content="devrim,mehmet,pattabanoğlu,devrimmehmet,proje,github,hatice,solakoglu">
+    <meta name="author" content="Devrim Mehmet Pattabanoğlu">
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - RestaurantApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- ==============================================
+    FAVICON
+    =============================================== -->
+    <link rel="shortcut icon" href="~/assets/img/img/favicon11.png">
+
+    <!-- ==============================================
+    CSS
+    =============================================== -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto%3A700%2C300" rel="stylesheet" property="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/fonts/font-awesome/css/font-awesome.css">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/settings.css">
+    <!-- REVOLUTION LAYERS STYLES -->
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/layers.css">
+    <!-- REVOLUTION NAVIGATION STYLES -->
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/navigation.css">
+
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/pages-styles.css">
+    <link rel="stylesheet" href="~/assets/css/styles.css">
+@*    <link rel="stylesheet" href="~/assets/css/shortcodes.css">*@
+    <link rel="stylesheet" href="~/assets/css/navigation.css">
+    <link rel="stylesheet" href="~/assets/css/restaurant.css">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/slick.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/sliders.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBHYB4HH44"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JBHYB4HH44');
+    </script>
+    <style>
+        #navigation1 {
+            background: rgba(0,0,0,0.8);
+        }
+    </style>
+
+</head>
+
+<body>
+    @RenderBody()
+    <!-- LOADER -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <!-- LOADER -->
+    <!-- MAIN WRAPPER -->
+    <!-- MAIN HEADER -->
+    <!-- END MAIN HEADER -->
+    <!-- END MAIN WRAPPER -->
+    @await Component.InvokeAsync("Footer")
+
+    <a href="#0" class="cd-top">Top</a>
+
     @await RenderSectionAsync("Scripts", required: false)
+    <!-- ==============================================
+    JAVASCRIPTS
+    =============================================== -->
+    <!-- LOAD JQUERY LIBRARY -->
+    <script src="~/assets/ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="~/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="~/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="~/assets/js/rev.sliders/fine.dining.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/top.js"></script>
+    <script src="~/assets/js/navigation.js"></script>
+    <script src="~/assets/js/megamenu.js"></script>
+    <script src="~/assets/js/shortcodes/jquery.magnific-popup.min.js"></script>
+    <script src="~/assets/js/shortcodes/gallery.js"></script>
+    <script src='~/assets/js/shortcodes/flickity.pkgd.min.js'></script>
+    <script src="~/assets/js/shortcodes/testimonials.js"></script>
+    <script src="~/assets/js/loader.js"></script>
+    <script src="~/assets/js/shortcodes/youtube.popup.js"></script>
+    <script src="~/assets/js/contact.js"></script>
+    <script src="~/assets/js/related-products.js"></script>
+    <script src='~/assets/js/slick.min.js'></script>
+    <script src="~/assets/js/rev.sliders/web-product.js"></script>
+    <script src="~/assets/js/shop.carousel.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131686713-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-131686713-1');
+    </script>
+
 </body>
+
+
 </html>
+

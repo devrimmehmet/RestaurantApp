@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RestaurantApp.Models;
+﻿using RestaurantApp.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace RestaurantApp.Controllers
+namespace CoreMVCUyg.Controllers
 {
     public class HomeController : Controller
     {
